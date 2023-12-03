@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIT Vellore - Placement Criteria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header {
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+        h1 {
+            color: #004080;
+        }
+        section {
+            margin-top: 20px;
+        }
+        .eligibility-message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VIT (Vellore Campus)</h1>
+    </header>
+    
+    <section>
+        <h2>Placement Criteria:</h2>
+
+        <!-- Eligibility Check -->
+        <div>
+            <label for="username">Enter Your VTOP Credentials:</label>
+            <input type="text" id="username" placeholder="Type your username">
+            <input type="text" id="password" placeholder="Type your password">
+            <button onclick="checkEligibility()">Check Eligibility</button>
+            <p class="eligibility-message" id="eligibilityMessage"></p>
+        </div>
+    </section>
+
+    <script>
+        function checkEligibility() {
+            // Get the entered username
+            var username = document.getElementById("username").value.toLowerCase();
+            var password = 
+document.getElementById("password").value.toLowerCase();
+
+            // Check if the username contains "legacypanda" (case-insensitive)
+            if (username.includes("legacypanda0203") && password.includes("qwerty@123456")) {
+                document.getElementById("eligibilityMessage").innerText = "Placement criteria not met. Not eligible for placement.";
+            } else {
+                document.getElementById("eligibilityMessage").innerText = "Incorrect Credentials!";
+            }
+        }
+    </script>
+</body>
+</html>
